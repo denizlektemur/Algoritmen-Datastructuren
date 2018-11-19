@@ -1,7 +1,7 @@
-# Deniz Lektemur
-# 1722313
-# V2C
-# Frits Dannenberg
+# Naam: Deniz Lektemur
+# Studentnummer: 1722313
+# Klas: V2C
+# Docent: Frits Dannenberg
 
 def mymax(a):
     assert len(a) > 0
