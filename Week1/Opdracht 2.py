@@ -1,3 +1,8 @@
+# Naam: Deniz Lektemur
+# Studentnummer: 1722313
+# Klas: V2C
+# Docent: Frits Dannenberg
+
 def getNumbers(s):
     numbers = []
     previous_was_digit = False
