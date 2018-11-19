@@ -1,3 +1,8 @@
+# Naam: Deniz Lektemur
+# Studentnummer: 1722313
+# Klas: V2C
+# Docent: Frits Dannenberg
+
 numbers_list = []
 prime_list = []
 mark_list = [False] * 999
