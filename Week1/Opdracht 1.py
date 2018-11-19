@@ -1,3 +1,8 @@
+# Deniz Lektemur
+# 1722313
+# V2C
+# Frits Dannenberg
+
 def mymax(a):
     assert len(a) > 0
     max_number = a[0]
