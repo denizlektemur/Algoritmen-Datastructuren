@@ -1,3 +1,8 @@
+# Naam: Deniz Lektemur
+# Studentnummer: 1722313
+# Klas: V2C
+# Docent: Frits Dannenberg
+
 import random
 
 counter = 0
