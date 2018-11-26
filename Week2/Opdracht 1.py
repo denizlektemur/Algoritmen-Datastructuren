@@ -1,14 +1,14 @@
-def machtv3(a,n):
-    assert n > 0
+def machtv3(basisgetal,macht):
+    assert macht > 0
 
-    m = 1
-    while n > 0:
-        if n%2 == 0:
-            a *= a
-            n /= 2
+    resultaat = 1
+    while macht > 0:
+        if macht%2 == 0:
+            basisgetal *= basisgetal
+            macht /= 2
         else:
-            m *= a
-            n -= 1
-    return m
+            resultaat *= a
+            macht -= 1
+    return resultaat
 
 print(machtv3(2,10))

@@ -20,19 +20,20 @@ class mystack:
         else:
             return False
 
-def check_string(string):
+def check_string(myString):
     stack = mystack()
     mypairs = {'>' : '<', ']' : '[', ')' : '('}
-    if len(string) > 0:
-        for i in string:
-            if i == '<' or i == '[' or i == '(':
-                stack.push(i)
-            if i == '>' or i == ']' or i == ')':
-                if(stack.peek() == mypairs.get(i)):
+    if len(myString) > 0:
+        for character in myString:
+            if character == '<' or character == '[' or character == '(':
+                stack.push(character)
+            if character == '>' or character == ']' or character == ')':
+                if(stack.peek() == mypairs.get(character)):
                     stack.pop()
                 else:
                     return False
-        return True
+        if stack.peek() != None:
+            return False
     return True
 
 print(check_string('((<>)())'))
@@ -40,3 +41,4 @@ print(check_string('[(<>)]()(()())'))
 print(check_string('((<>))'))
 print(check_string('([)]'))
 print(check_string('(((<)>))'))
+print(check_string('((<>())'))

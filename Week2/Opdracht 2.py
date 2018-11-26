@@ -1,6 +1,6 @@
 class mystack:
-    def __init__(self, list = []):
-        self.stack = list
+    def __init__(self, stackList = []):
+        self.stack = stackList
 
     def push(self, element):
         self.stack.append(element)
@@ -20,4 +20,4 @@ class mystack:
         else:
             return False
 
-mystack = mystack()
+myNumbersStack = mystack()
