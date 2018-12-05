@@ -31,7 +31,6 @@ my_text = open("TextFile.txt", "r")
 my_second_text = open("TextFile.txt", "r")
 my_dict = makeWordsDict(my_text)
 dictToTxt(my_dict)
-print("The word \"the\" occurs", my_dict["the"], "times")
 
 class TrieNode:
     def __init__(self):
@@ -85,7 +84,7 @@ def wordsToTrie(text):
                 my_trie.addWord(word)
     return my_trie.root
 
-def trieToTxt(trieNode, text = open("trieFreq.txt", "w"), stringToWrite = ""):
+def trieToTxt(trieNode, text, stringToWrite = ""):
     if trieNode.value > 0:
         text.write(stringToWrite + " " + str(trieNode.value) + "\n")
     if len(trieNode.children.keys()) > 0:
@@ -95,8 +94,8 @@ def trieToTxt(trieNode, text = open("trieFreq.txt", "w"), stringToWrite = ""):
 
 my_second_text = open("TextFile.txt", "r")
 my_trie_root = wordsToTrie(my_second_text)
-print(my_trie_root.children.keys())
-trieToTxt(my_trie_root)
+trietext = open("trieFreq.txt", "w")
+trieToTxt(my_trie_root, trietext)
 
 def freqDict(text):
     my_dict = {}
@@ -105,8 +104,8 @@ def freqDict(text):
         my_dict[word] = freq
     return my_dict
 
-# dicttext = open("dictFreq.txt", "r")
-# dictFreq = freqDict(dicttext)
+dicttext = open("dictFreq.txt", "r")
+dictFreq = freqDict(dicttext)
 trietext = open("trieFreq.txt", "r")
 trieFreq = freqDict(trietext)
 
@@ -119,6 +118,6 @@ def check2dicts(dict1, dict2):
             return False
     return True
 
-# print(dictFreq.keys())
+print(dictFreq.keys())
 print(trieFreq.keys())
-# print(check2dicts(dictFreq, trieFreq))
+print(check2dicts(dictFreq, trieFreq))
