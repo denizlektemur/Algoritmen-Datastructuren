@@ -19,10 +19,8 @@ def rsearch(amountOfQueens, queenList):
         if check(queenList, i):
             queenList.append(i)
             if len(queenList) == amountOfQueens:
-                if queenList not in solutionList:
-                    solutionList.append(queenList) # geschikte a gevonden
-                    rsearch(amountOfQueens, [])
-                    return True
+                solutionList.append(list(queenList))
+                rsearch(amountOfQueens, queenList)
             else:
                 if rsearch(amountOfQueens, queenList):
                     return True
@@ -31,7 +29,6 @@ def rsearch(amountOfQueens, queenList):
 
 queenList = []
 solutionList = [] # a geeft voor iedere rij de kolompositie aan
-t = 0
 rsearch(8, queenList)
 print(solutionList)
 
