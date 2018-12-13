@@ -28,7 +28,6 @@ def dictToTxt(words_dict):
     text.close()
 
 my_text = open("TextFile.txt", "r")
-my_second_text = open("TextFile.txt", "r")
 my_dict = makeWordsDict(my_text)
 dictToTxt(my_dict)
 
