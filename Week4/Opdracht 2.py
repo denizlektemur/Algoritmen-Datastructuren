@@ -1,10 +1,14 @@
-mydict = {}
-i = 0.000001
-a = 0.999999
-while i < a:
-    hashvalue = hash(i)
-    if hashvalue in mydict:
-        print(repr(i), "==", repr(mydict[hashvalue]), "==", repr(hashvalue))
-    else:
-        mydict[hashvalue] = i
-    i += 0.000001
+from random import random
+
+def find_fraction_with_same_hash():
+    hashes = dict()
+    while True:
+        new_number = random()
+        new_hash = hash(new_number)%(2**32)
+        if new_hash in hashes:
+            print(repr(new_number), "==", hashes[new_hash], '==', repr(hash(new_number)))
+            return
+        else:
+            hashes[new_hash] = new_number
+
+find_fraction_with_same_hash()
